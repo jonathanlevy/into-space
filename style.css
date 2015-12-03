@@ -1,0 +1,606 @@
+*{
+padding:0;
+margin:0;
+}
+
+@font-face { 
+    font-family: OpenSans; 
+    src: url('3792_1423222757.ttf'); 
+}
+
+@font-face { 
+    font-family: OpenSansBold-Regular; 
+    src: url('3793_1423222772.ttf'); 
+}
+
+@font-face { 
+    font-family: OpenSansItalic-Italic; 
+    src: url('3794_1423222878.ttf'); 
+}
+
+body {
+    background-size: contain;
+    max-width: 100%;
+    overflow-x: hidden;
+    margin: 0;
+    padding: 0;
+    font-family: 'Open Sans', sans-serif;    
+    font-size: 14px;
+    font-style: normal;
+    font-variant: normal;
+    text-align: left;
+    font-weight: 500;
+    color: white;
+}
+
+p {
+    background-size: contain;
+    width:100%;
+    margin: 0;
+    padding: 0;
+    font-family: 'Open Sans', sans-serif;    
+    font-size: 16px;
+    font-style: normal;
+    font-variant: normal;
+    text-align: left;
+    font-weight: 500;
+    color: white;
+    margin-left:10px;
+}
+
+#container{
+    max-width:100%;
+    background-size: contain;
+    min-height:100%;
+    overflow-x: hidden;
+}
+
+.panelCon{
+    width: 100%;
+    margin:0px auto; 
+    position:relative; 
+    overflow:hidden;
+}
+
+.panel {
+     width: 100%;
+     margin:0px auto; 
+     position:relative; 
+     overflow:hidden;
+}
+
+.panel h1 {
+    width: 100px;
+    position: relative;
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+    top: 50%;
+}
+
+#rocketship {
+    position: fixed; 
+    margin:0px auto; 
+    bottom: -50px; 
+    background:url("rocket_animated.gif") no-repeat center top; 
+    height: 246px; 
+    width:45px;
+    left:127px;
+    bottom:0px;
+    background-size: contain;
+    z-index: 2000;
+    }
+
+.footer {
+    position: fixed;
+    line-height: 40px;
+    margin: 0px;
+    height: 40px;
+    overflow: auto;
+    bottom: 0px;
+    left: 0px;
+    width: 100%;
+    color: black;
+    background-color: rgba(255, 255, 255, 0.8);
+}
+
+#numMi {
+   font-weight: 700;
+    overflow: auto;
+    left: 0px;
+    display: block;
+    text-align: left;
+    margin-left: 20px;
+    width: auto;
+    font-size: 20px;
+    background-size: contain;
+    height: 100%;
+    float: left;
+    vertical-align: bottom;
+    }
+
+#textMi{  
+    display: inline-block;
+    overflow: auto;
+    vertical-align: middle;
+    margin-left: 3px;
+    height: 100%;
+    width: 20px;
+    text-align: left;
+    font-size: 16px;
+    background-size: contain;
+    float: left;
+}
+
+#km{
+    position: absolute;
+    left:160px;
+    float:left;
+}
+
+#numKm {
+    font-weight: 700;
+    overflow: auto;
+    top: 0px;
+    left: 160px;
+    height: 100%;
+    display: block;
+    text-align: right;
+    margin-left: 10px;
+    width: auto;
+    font-size: 20px;
+    background-size: contain;
+    float: left;
+}
+
+#textKm{  
+    display: inline-block;
+    overflow: auto;
+    vertical-align: middle;
+    height: 100%;
+    margin-left: 3px;
+    width: auto;
+    text-align: left;
+    font-size: 16px;
+    background-size: contain;
+    float: left;
+}
+
+h1 {
+
+    color: white;
+    margin-left:10px;
+    font-family: 'Open Sans', sans-serif;    
+    font-size: 16px;
+    font-variant: normal;
+    text-align: left;
+    font-weight: 600;
+
+}
+.title
+    {
+
+    color: white;
+    margin-left:10px;
+    font-family: 'OpenSansBold-Regular';    
+    font-size: 20px;
+    font-weight: bold;
+    text-align: left;
+    font-weight: 600;
+
+}
+
+h2 {
+    width:100%;
+    font-family: 'Open Sans', sans-serif;    
+    font-size: 24px;
+    font-variant: normal;
+    text-align: left;
+    font-weight: 500;
+    line-height: 26.4px;
+    color: white;
+}
+
+
+
+
+.txt1-jet { 
+    position:relative;
+    top:305px;
+    background-size: contain;
+    }
+
+.scrollblock-voyager {
+    position: relative;
+    margin: 0;
+    width: 100%;
+    height: 300px;
+}
+
+.scrollblock-satellite {
+    position: relative;
+    margin: 0;
+    width: 100%;
+    height: 300px;
+    top:6630px;
+}
+
+.scrollblock-hubble {
+    position: relative;
+    margin: 0;
+    width: 100%;
+    height: 300px;
+    top:-60px;
+}
+
+
+.scrollblock-jet {
+    position: relative;
+    margin: 0;
+    top:155px;
+    width: 100%;
+    height: 300px;
+}
+
+.scrollblock-orbit {
+    position: relative;
+    margin: 0;
+    width: 100%;
+    height: 300px;
+    top:5653px;
+}
+
+.scrollblock-iss {
+    position: relative;
+    margin: 0;
+    width: 100%;
+    height: 300px;
+    top:2800px;  
+}
+
+#transition {
+    overflow: hidden;
+}
+
+#transition-orbit {
+    overflow: hidden;
+}
+#transition-iss {
+    overflow: hidden;
+}
+
+.jet {
+    background:url("images/jet.png") no-repeat; 
+    height:142px; 
+    width:220px;
+    background-size: contain;
+}
+
+#altitude2 {
+    background:url("images/scale2.png") no-repeat; 
+    height:11732px;
+    background-size: contain;
+    width: 100%;
+    overflow:visible;
+}
+
+#altitude1 {
+    background:url("images/scale1.png") no-repeat; 
+    height:1066px;
+    background-size: contain;
+    width: 100%;
+    overflow:visible:;
+}
+
+.txt2-clouds { 
+    position:relative;
+    top:10080px;
+    background-size: contain;
+    }
+
+.clouds {
+    position: relative;
+    height:166px; 
+    width:100%;
+    background:url("images/clouds.png") no-repeat; 
+    top:10080px;
+    background-size: contain;
+}
+
+.orbit
+    { 
+    background:url("images/orbit.png") no-repeat; 
+    height:134px;
+    width:194px;
+    background-size: contain;
+    }
+
+.txt2-orbit
+    {
+    position:relative;
+    top:6383px;
+    background-size: contain;
+    }
+
+.hubble {
+    background:url("images/hubble.png") no-repeat; 
+    position: relative;
+    width:218px;
+    height:220px;
+    top:0px;  
+    background-size: contain;
+}
+
+.txt2-hubble {
+
+    position:relative;
+    top:170px;
+    background-size: contain;
+
+    }
+
+
+.iss {
+    background:url("images/iss.png") no-repeat; 
+    width:298px;
+    height:196px; 
+    background-size: contain;
+}
+
+.txt2-iss {
+    position: relative;
+    top:3290px;
+    background-size: contain;
+}
+
+#altitude3 {
+    background:url("images/scale3.png") no-repeat; 
+    height:8000px;
+    background-size: contain;
+    width: 100%;
+    overflow: hidden;
+}
+
+.moon {
+    background:url("images/moon.png") no-repeat; 
+    position: relative;
+    width:132px;
+    height:132px;
+    top:27px;  
+    left:94px;
+    background-size: contain;
+}
+
+.txt3-moon {
+    position: relative;
+    top:27px;
+    background-size: contain;
+
+}
+.van-allen {
+
+    background:url("images/van_allen.png") no-repeat; 
+    position: relative;
+    width:100%;
+    height:280px;
+    top:6453px;  
+    background-size: contain;
+}
+
+.txt3-van-allen {
+    position: relative;
+    top:6413px;
+    background-size: contain;
+
+}
+.satellite {
+
+    background:url("images/satellite.png") no-repeat; 
+    position: relative;
+    width:264px;
+    height:220px;
+    position:relative;
+    top:0px;  
+    background-size: contain;
+}
+
+.txt3-sat {
+    position: relative;
+    top:6858px;
+    background-size: contain;
+
+}
+
+#altitude4 {
+    background:url("images/scale4.png") no-repeat; 
+    height:4266px;
+    width: 100%;
+    background-size: contain;
+    overflow: hidden;
+}
+
+.mercury {
+
+    background:url("images/mercury.png") no-repeat; 
+    position: relative;
+    width:128px;
+    height:128px;
+    top:425px;
+    left:96px;
+    background-size: contain;
+}
+
+.txt4-mercury {
+    position: relative;
+    top:425px;
+    background-size: contain;
+
+}
+
+.mars {
+
+    background:url("images/mars.png") no-repeat; 
+    position: relative;
+    width:230px;
+    height:230px;
+    top:777px; 
+    left:45px; 
+    background-size: contain;
+}
+
+.txt4-mars {
+    position: relative;
+    top:777px;
+    background-size: contain;
+}
+.venus {
+
+    background:url("images/venus.png") no-repeat; 
+    position: relative;
+    width:272px;
+    height:272px;
+    top:1902px;  
+    left:24px;
+    background-size: contain;
+}
+
+.txt4-venus {
+    position: relative;
+    top:1902px;
+    background-size: contain;
+
+}
+
+#altitude5 {
+    background:url("images/scale5.png") no-repeat; 
+    height:10666px;
+    width: 100%;
+    background-size: contain;
+    overflow: visible;
+}
+
+
+.asteroid { 
+    background:url("images/asteroid.png") no-repeat; 
+    width:230px;
+    height:178px;
+    position:relative;
+    top:6800px;  
+    background-size: contain;
+    z-index: 1000;
+}
+
+.txt5-asteroid {
+    position:relative;
+    top: 6800px;
+    background-size: contain;
+
+}
+
+.jupiter {  
+    background:url("images/jupiter.png") no-repeat; 
+    position:relative;
+    width:100%;
+    height:384px;
+    top:8880px;  
+    background-size: contain;
+}
+
+.txt5-jupiter {
+    position: relative;
+    top:8880px;
+    background-size: contain;
+
+}
+
+.saturn{
+
+    background:url("images/saturn.png") no-repeat; 
+    width:100%;
+    height:260px;
+    position:relative;
+    top:8876px;  
+    background-size: contain;
+}
+
+.txt5-saturn{
+    position: relative;
+    top:8876px;
+    background-size: contain;
+
+}
+
+.uranus{
+
+    background:url("images/uranus.png") no-repeat; 
+    width:264px;
+    height:264px;
+    position:relative;
+    top:8756px;
+    left:28px;  
+    background-size: contain;
+}
+
+.txt5-uranus{
+    position: relative;
+    top:8756px;
+    background-size: contain;
+
+}
+
+.neptune{
+
+    background:url("images/neptune.png") no-repeat; 
+    width:252px;
+    height:252px;
+    position:relative;
+    top:8300px;  
+    background-size: contain;
+}
+
+.txt5-neptune{
+    position: relative;
+    top:8300px;
+    background-size: contain;
+
+}
+
+.pluto{
+
+    background:url("images/pluto.png") no-repeat; 
+    width:76px;
+    height:76px;
+    position:relative;
+    top:7225px;  
+    left:195px;
+    background-size: contain;
+}
+
+.txt5-pluto{
+    position: relative;
+    top:7225px;
+    background-size: contain;
+
+}
+
+#voyager1{
+    -webkit-transition: all 3s ease;
+    position: relative;
+    left: -400px;
+}
+
+.voyager{
+    background:url("images/voyager.png") no-repeat; 
+    width:290px;
+    height:210px;
+    top:150px;
+    position:relative;
+    background-size: contain;
+}
+
+.txt5-voyager{
+    position: relative;
+    top:187px;
+    background-size: contain;
+
+}

@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Spaceship Animation</title>
+        <script src="jquery.min.js"></script>
+        <script src="jquery.scrollorama.js"></script>
+
+       <link rel="stylesheet" type="text/css" href="style.css" media="screen"> 
+     </head>
+
+
+<body>
+    <div id="container">
+        <div id="altitude5">
+        <div class="voyager" id="voyager1"></div>
+        <div class="txt5-voyager">
+            <div class="title"><b>[[ds:/IntoSpace/item/marker18]]</b></div><p>[[ds:/IntoSpace/item/notes18]]<br>[[ds:/IntoSpace/item/au18]]</p>
+        </div>
+
+        <div class="pluto"></div>
+        <div class="txt5-pluto">
+            <div class="title"><b>[[ds:/IntoSpace/item/marker17]]</b></div><p>[[ds:/IntoSpace/item/au17]]</p>
+        </div>
+
+        <div class="neptune"></div>
+        <div class="txt5-neptune">
+            <div class="title"><b>[[ds:/IntoSpace/item/marker16]]</b></div><p>[[ds:/IntoSpace/item/au16]]</p>
+        </div>
+
+        <div class="uranus"></div>
+        <div class="txt5-uranus">
+            <div class="title"><b>[[ds:/IntoSpace/item/marker15]]</b></div><p>[[ds:/IntoSpace/item/au15]]</p>
+        </div>
+
+        <div class="saturn"></div>
+        <div class="txt5-saturn">
+            <div class="title"><b>[[ds:/IntoSpace/item/marker14]]</b></div><p>[[ds:/IntoSpace/item/au14]]</p>
+        </div>
+
+        <div class="jupiter"></div>
+        <div class="txt5-jupiter">
+            <div class="title"><b>[[ds:/IntoSpace/item/marker13]]</b></div>
+<p>[[ds:/IntoSpace/item/au13]]</p>
+        </div>
+    </div>
+
+    <div id="altitude4">
+        <div class="mercury"></div>
+        <div class="txt4-mercury">
+            <div class="title"><b>[[ds:/IntoSpace/item/marker11]]</b></div>
+<p>[[ds:/IntoSpace/item/notes11]]</p>
+        </div>
+
+        <div class="mars"></div>
+        <div class="txt4-mars">
+            <div class="title"><b>[[ds:/IntoSpace/item/marker10]]</b></div><p>[[ds:/IntoSpace/item/notes10]]<br>[[ds:/IntoSpace/item/au10]]</p>
+        </div>
+
+        <div class="venus"></div>
+        <div class="txt4-venus">
+            <div class="title"><b>[[ds:/IntoSpace/item/marker9]]</b></div><p>[[ds:/IntoSpace/item/notes9]]<br>[[ds:/IntoSpace/item/au9]]</p>
+        </div>
+    </div>
+
+    <div id="altitude3"> 
+     <div class="moon"></div>
+        <div class="txt3-moon">
+            <div class="title"><b>[[ds:/IntoSpace/item/marker8]]</b></div>
+<p>[[ds:/IntoSpace/item/notes8]]</p>
+        </div>
+
+    <div class="van-allen"></div>
+        <div class="txt3-van-allen">
+            <div class="title"><b>[[ds:/IntoSpace/item/marker7]]</b></div><p>[[ds:/IntoSpace/item/notes7]]</p>
+        </div>
+
+
+        <div class="scrollblock-satellite" id="transition">
+        <div class="satellite" id="fly-in-satellite"></div>
+    </div>
+        <div class="txt3-sat">
+            <div class="title"><b>[[ds:/IntoSpace/item/marker6]]</b></div>
+<p>[[ds:/IntoSpace/item/notes6]]</p>
+        </div>
+
+    </div>
+
+    <div id="altitude2">
+         <div class="scrollblock-hubble" id="transition">
+        <div class="hubble" id="fly-in-hubble"></div>
+    </div>
+
+        <div class="txt2-hubble">
+            <div class="title"><b>[[ds:/IntoSpace/item/marker5]]</b></div>
+<p>[[ds:/IntoSpace/item/notes5]]</p>
+        </div>
+
+        <div class="scrollblock-iss" id="transition">
+        <div class="iss" id="fly-in-iss"></div>
+    </div>
+        <div class="txt2-iss">
+            <div class="title"><b>[[ds:/IntoSpace/item/marker4]]</b></div>
+<p>[[ds:/IntoSpace/item/notes4]]</p>
+        </div>
+
+
+        <div class="scrollblock-orbit" id="transition" >
+        <div class="orbit" id="fly-in-orbit"></div>
+        </div>
+
+        <div class="txt2-orbit">
+            <div class="title"><b>[[ds:/IntoSpace/item/marker3]]</b></div>
+<p>[[ds:/IntoSpace/item/notes3]]</p>
+        </div>
+
+        <div class="clouds"></div>
+        <div class="txt2-clouds">
+            <div class="title"><b>[[ds:/IntoSpace/item/marker2]]</b></div><p>[[ds:/IntoSpace/item/notes2]] </p>
+        </div>
+    </div>
+
+    <div id="altitude1">
+        <div class="scrollblock-jet" id="transition">
+            <div class="jet" id="fly-in-jet"></div>
+        </div>
+        <div class="txt1-jet">
+        <div class="title"><b>[[ds:/IntoSpace/item/marker1]]</b></div>
+        </div>
+    </div>
+
+    <div id="rocketship"></div>
+</div>
+    <div class="footer"> 
+        <div id="numMi"></div>
+        <div id="textMi">mi</div>
+        <div id="km">
+            <div id="numKm"></div>
+            <div id="textKm">km</div>
+        </div>
+
+    </div>
+
+
+
+
+
+<script>
+    window.scrollTo(0, document.body.clientHeight); 
+    var scrollnum = $(document).scrollTop();
+</script> 
+
+
+<script>
+        $(document).ready(function() {
+            var scrollorama = $.scrollorama({ blocks:'.scrollblock-jet'});
+            scrollorama
+
+            .animate('#fly-in-jet',{     
+                delay: -300,
+                duration: 1200, 
+                property:'left', 
+                start:320, 
+                end:-1100 
+            });
+
+         });
+</script>
+
+
+<script>
+        $(document).ready(function() {
+            var scrollorama = $.scrollorama({ blocks:'.scrollblock-orbit'});
+
+            scrollorama
+
+            .animate('#fly-in-orbit',{  
+                delay: -400,
+                duration: 800,
+                property:'right', 
+                start:320, 
+                end:-1000 
+            });
+
+        });
+
+</script>
+
+<script>
+        $(document).ready(function() {
+            var scrollorama = $.scrollorama({ blocks:'.scrollblock-iss'});
+
+            scrollorama
+
+            .animate('#fly-in-iss',{
+                delay:-300,     
+                duration: 1000,
+                property:'left', 
+                start:320, 
+                end:-1000
+            });
+
+        });
+</script>
+
+<script>
+        $(document).ready(function() {
+            var scrollorama = $.scrollorama({ blocks:'.scrollblock-hubble'});
+
+            scrollorama
+
+            .animate('#fly-in-hubble',{
+                delay:-400,     
+                duration: 1000,
+                property:'left', 
+                start:320, 
+                end:-1000
+            });
+
+        });
+</script>
+
+<script>
+        $(document).ready(function() {
+            var scrollorama = $.scrollorama({ blocks:'.scrollblock-satellite'});
+
+            scrollorama
+
+            .animate('#fly-in-satellite',{
+                delay: -300,
+                duration: 1000,
+                property:'right', 
+                start:320, 
+                end:-1000 
+            });
+        });
+</script>
+
+
+<script>
+
+    var billMi;
+    $(document).scroll(function () {
+    num = scrollnum-$(document).scrollTop();
+    num = (num+177);
+    billMi = (((((num-25067)*1500000)+64240341))/1000000000);
+    billMi =  billMi.toFixed(1);
+    billMi =  (billMi + " billion ");
+    if (num > 0 && num < 1067) { 
+        $("#numMi").text(Math.floor((num)*0.007102275)|| "0");
+        } 
+    if (num > 1066 && num < 12800) { 
+        $("#numMi").text(Math.floor(((num-1067)*0.02838068182624)+8)|| "0");
+        }
+    if (num > 12799 && num < 20800) { 
+        $("#numMi").text(Math.floor(((num-12800)*30)+341)|| "0");
+        }
+    if (num > 20799 && num < 25067) { 
+        $("#numMi").text(Math.floor(((num-20800)*15000)+240341)|| "0");
+        } 
+    if (num > 25066 && num < 100000) {
+         $("#numMi").text((billMi)|| "0");
+
+    if(num > 32900){
+            $('#voyager1').css({left:50});
+        }
+        } 
+    });
+</script>
+
+<script>
+    var billKm;
+    $(document).scroll(function () {
+    num = scrollnum-$(document).scrollTop(); 
+    num = (num+177);
+    billKm = (((((num-25067)*2400000)+102784546))/1000000000);
+    billKm = billKm.toFixed(1);
+    billKm =  (billKm + " billion ");
+    if (num > 0 && num < 1067) {    
+        $("#numKm").text(Math.floor((num)*0.01143)|| "0");
+    }
+    if (num > 1066 && num < 12800) {    
+        $("#numKm").text(Math.floor(((num-1067)*0.04540909092198)+12.8)|| "0");
+    }
+    if (num > 12799 && num < 20800) {    
+        $("#numKm").text(Math.floor(((num-12800)*48)+545.6)|| "0");
+    } 
+    if (num > 20799 && num < 25067) { 
+        $("#numKm").text(Math.floor(((num-20800)*24000)+384546)|| "0");
+    } 
+    if (num > 25066 && num < 100000) {
+        $("#numKm").text((billKm)|| "0");
+        }     
+    });
+
+</script>
+
+  </body>
+
